@@ -1,0 +1,29 @@
+zones:
+  # zone-1:
+  #   type: zone
+  #   world: world
+  #   from:
+  #     x: -50
+  #     y: 0
+  #     z: -50
+  #   to:
+  #     x: 50
+  #     y: 255
+  #     z: 50
+  #   enter:
+  #     command: 'effect give {player} blindness 30 1'
+  #   exit:
+  #     command: 'effect clear {player} blindness'
+  boundry-1:
+    type: boundry
+    world: world
+    condition: '{player.y} < 0'
+    enter:
+      tp:
+        world: world_nether
+        location:
+          x: '{player.x} / 8'
+          y: 128
+          z: '{player.z} / 8'
+        motion:
+          y: 0
