@@ -2,10 +2,10 @@ package me.yukiironite;
 
 import org.bukkit.entity.Player;
 
-public class BoundryZone extends Zone {
+public class BoundaryZone extends Zone {
   private String condition;
 
-  public BoundryZone(String zoneName, String worldName, ZoneEventHandler enterHandler, ZoneEventHandler exitHandler, String condition) {
+  public BoundaryZone(String zoneName, String worldName, ZoneEventHandler enterHandler, ZoneEventHandler exitHandler, String condition) {
     super(zoneName, worldName, enterHandler, exitHandler);
 
     this.condition = condition;

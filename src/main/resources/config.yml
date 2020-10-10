@@ -14,8 +14,8 @@ zones:
   #     command: 'effect give {player} blindness 30 1'
   #   exit:
   #     command: 'effect clear {player} blindness'
-  boundry-1:
-    type: boundry
+  boundary-1:
+    type: boundary
     world: world
     condition: '{player.y} < 0'
     enter:

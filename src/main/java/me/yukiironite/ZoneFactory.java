@@ -8,7 +8,7 @@ public class ZoneFactory {
     
     switch(type) {
       case "zone": return regionZoneFromConfig(zoneName, zoneConfig);
-      case "boundry": return boundryZoneFromConfig(zoneName, zoneConfig);
+      case "boundary": return boundaryZoneFromConfig(zoneName, zoneConfig);
       default: return null;
     }
   }
@@ -28,12 +28,12 @@ public class ZoneFactory {
     return new RegionZone(zoneName, zoneWorld, enterHandler, exitHandler, startX, startY, startZ, endX, endY, endZ);
   }
 
-  public static BoundryZone boundryZoneFromConfig(String zoneName, ConfigurationSection zoneConfig) {
+  public static BoundaryZone boundaryZoneFromConfig(String zoneName, ConfigurationSection zoneConfig) {
     String zoneWorld = zoneConfig.getString("world");
     String condition = zoneConfig.getString("condition");
     ZoneEventHandler enterHandler = ZoneEventHandler.fromConfig(zoneConfig.getConfigurationSection("enter"));
     ZoneEventHandler exitHandler = ZoneEventHandler.fromConfig(zoneConfig.getConfigurationSection("exit"));
 
-    return new BoundryZone(zoneName, zoneWorld, enterHandler, exitHandler, condition);
+    return new BoundaryZone(zoneName, zoneWorld, enterHandler, exitHandler, condition);
   }
 }
